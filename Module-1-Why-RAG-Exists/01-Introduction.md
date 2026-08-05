@@ -1,6 +1,8 @@
 # Module 1: Why RAG Exists
 
-# Introduction
+> **Module 1** — Previous: [Course home](../../README.md) · Next chapter: 02-LLM Limitations.md → [02-LLM Limitations](02-LLM%20Limitations.md)
+
+## Introduction
 
 Welcome to the first module of the RAG-TUT course.
 
@@ -14,7 +16,7 @@ This module focuses on building that foundation.
 
 ---
 
-# What You Will Learn
+## What You Will Learn
 
 By the end of this module, you will understand:
 
@@ -31,11 +33,11 @@ Most importantly, you will develop the mental model required to understand every
 
 ---
 
-# The Evolution of Information Systems
+## The Evolution of Information Systems
 
 To understand RAG, it helps to understand how information systems evolved.
 
-## Traditional Software
+### Traditional Software
 
 In traditional applications:
 
@@ -53,7 +55,7 @@ The database returns exact answers. There is no guessing.
 
 ---
 
-## Search Engines
+### Search Engines
 
 Search engines introduced retrieval.
 
@@ -71,7 +73,7 @@ The search engine finds information, but humans must interpret it.
 
 ---
 
-## Large Language Models
+### Large Language Models
 
 Modern AI systems introduced LLMs.
 
@@ -87,7 +89,7 @@ Instead of returning documents, the system generates a natural language response
 
 ---
 
-# What is a Large Language Model?
+## What is a Large Language Model?
 
 A Large Language Model is an AI system trained on massive amounts of text data.
 
@@ -104,7 +106,7 @@ These models learn patterns from billions of documents and can perform a wide ra
 
 ---
 
-# The Biggest Misconception
+## The Biggest Misconception
 
 Many beginners believe:
 
@@ -136,7 +138,7 @@ Think of an LLM as a highly advanced prediction engine, not a perfect source of 
 
 ---
 
-# Why This Matters
+## Why This Matters
 
 Imagine a company called Acme Technologies.
 
@@ -150,7 +152,7 @@ This is the first clue that something is missing.
 
 ---
 
-# The Four Core Challenges
+## The Four Core Challenges
 
 Modern AI systems face four major challenges:
 
@@ -163,7 +165,7 @@ These challenges become increasingly severe as AI moves into enterprise producti
 
 ---
 
-# Real Enterprise Example
+## Real Enterprise Example
 
 Imagine a company with:
 
@@ -188,7 +190,7 @@ This is where RAG enters the picture.
 
 ---
 
-# Introducing Retrieval-Augmented Generation
+## Introducing Retrieval-Augmented Generation
 
 Retrieval-Augmented Generation combines:
 
@@ -228,7 +230,7 @@ It can answer using actual evidence.
 
 ---
 
-# The Mental Model
+## The Mental Model
 
 Think of an LLM as a highly intelligent employee.
 
@@ -260,7 +262,7 @@ The LLM is the employee.
 
 ---
 
-# Why This Course Starts Here
+## Why This Course Starts Here
 
 Many RAG tutorials begin with implementation details.
 
@@ -270,7 +272,7 @@ Once you understand the problem, the architecture becomes much easier to underst
 
 ---
 
-# Summary
+## Summary
 
 In this introduction, we learned:
 
@@ -281,3 +283,23 @@ In this introduction, we learned:
 - RAG was created to solve these problems
 
 In the next lesson, we will explore the first major limitation of LLMs: LLM Limitations.
+
+---
+
+## Test Yourself
+
+1. Why is it wrong to think of an LLM as a knowledge database?
+2. What does an LLM actually predict when it generates text?
+3. Name the four core challenges that modern AI systems face.
+4. In the Acme Technologies example, why can't a generic LLM answer a question about the 30-day leave policy?
+5. In the employee-and-library mental model, what does RAG represent?
+
+<details>
+<summary>Answers</summary>
+
+1. An LLM is a prediction engine built on pattern matching, not a source of verified facts.
+2. It predicts the most likely next token (word) based on patterns learned during training.
+3. Hallucinations, knowledge cutoffs, private data, and context limits.
+4. The model has never seen the private HR document, so any answer it gives would be a guess.
+5. RAG is the library that gives the LLM employee access to relevant documents.
+</details>

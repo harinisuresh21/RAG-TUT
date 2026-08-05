@@ -1,6 +1,8 @@
 # Context Window Limitations
 
-# Introduction
+> **Module 1** — Previous: [05-Private data problem](05-Private%20data%20problem.md) · Next chapter: 07-Fine tunning vs RAG.md → [07-Fine tunning vs RAG](07-Fine%20tunning%20vs%20RAG.md)
+
+## Introduction
 
 Imagine giving an AI model:
 
@@ -22,7 +24,7 @@ Reality is very different.
 
 Every Large Language Model has a limitation known as a:
 
-# Context Window
+## Context Window
 
 The context window determines how much information a model can "see" at one time.
 
@@ -32,7 +34,7 @@ This limitation is one of the most important reasons Retrieval-Augmented Generat
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -46,7 +48,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# What is a Context Window?
+## What is a Context Window?
 
 A Context Window is the amount of information an LLM can process in a single interaction.
 
@@ -68,7 +70,7 @@ Anything outside the window is invisible.
 
 ---
 
-# Human Analogy
+## Human Analogy
 
 Imagine reading a book through a small window.
 
@@ -90,7 +92,7 @@ The same principle applies to LLMs.
 
 ---
 
-# What Are Tokens?
+## What Are Tokens?
 
 Before understanding context windows, we need to understand tokens.
 
@@ -111,7 +113,7 @@ A token can be:
 
 ---
 
-# Example
+## Example
 
 Text:
 
@@ -148,7 +150,7 @@ able
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```text
 Sentence
@@ -162,7 +164,7 @@ Model
 
 ---
 
-# Why Tokens Matter
+## Why Tokens Matter
 
 Context windows are measured in:
 
@@ -186,7 +188,7 @@ Approximately 8,000 Tokens
 
 ---
 
-# Typical Context Sizes
+## Typical Context Sizes
 
 Modern models vary significantly.
 
@@ -204,7 +206,7 @@ Even large context windows are finite.
 
 ---
 
-# Everything Counts Toward Context
+## Everything Counts Toward Context
 
 Many beginners think:
 
@@ -232,7 +234,7 @@ Everything consumes tokens.
 
 ---
 
-# Visual Breakdown
+## Visual Breakdown
 
 ```text
 Context Window
@@ -252,7 +254,7 @@ Context Window
 
 ---
 
-# The Overflow Problem
+## The Overflow Problem
 
 What happens when the limit is exceeded?
 
@@ -280,7 +282,7 @@ gets discarded.
 
 ---
 
-# Example
+## Example
 
 Conversation:
 
@@ -306,7 +308,7 @@ The model forgets.
 
 ---
 
-# Why This Is a Major Enterprise Problem
+## Why This Is a Major Enterprise Problem
 
 Imagine a company with:
 
@@ -328,7 +330,7 @@ The context window would overflow.
 
 ---
 
-# Visual Example
+## Visual Example
 
 ```text
 Knowledge Base
@@ -344,7 +346,7 @@ Only a small portion can fit.
 
 ---
 
-# Why Bigger Context Windows Don't Fully Solve It
+## Why Bigger Context Windows Don't Fully Solve It
 
 Many people assume:
 
@@ -372,7 +374,7 @@ The problem still exists.
 
 ---
 
-# Cost Problems
+## Cost Problems
 
 Larger context means:
 
@@ -398,7 +400,7 @@ costs far less than:
 
 ---
 
-# Performance Problems
+## Performance Problems
 
 As context grows:
 
@@ -414,7 +416,7 @@ The model may struggle to identify what is important.
 
 ---
 
-# Lost in the Middle Problem
+## Lost in the Middle Problem
 
 Researchers discovered an interesting issue.
 
@@ -430,11 +432,11 @@ Models often struggle to find information hidden in the middle.
 
 This is called:
 
-# Lost in the Middle
+## Lost in the Middle
 
 ---
 
-# Example
+## Example
 
 Document:
 
@@ -456,7 +458,7 @@ The model may miss it.
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```text
 Beginning  ✓
@@ -470,7 +472,7 @@ Information in the middle is sometimes overlooked.
 
 ---
 
-# Multi-Document Problem
+## Multi-Document Problem
 
 Suppose:
 
@@ -495,7 +497,7 @@ This becomes increasingly difficult.
 
 ---
 
-# Traditional LLM Approach
+## Traditional LLM Approach
 
 ```mermaid
 flowchart TD
@@ -514,7 +516,7 @@ Problems:
 
 ---
 
-# Why RAG Was Created
+## Why RAG Was Created
 
 Instead of sending:
 
@@ -530,7 +532,7 @@ Relevant Information
 
 ---
 
-# RAG Workflow
+## RAG Workflow
 
 ```mermaid
 flowchart TD
@@ -550,7 +552,7 @@ E --> F[Answer]
 
 ---
 
-# Example
+## Example
 
 Knowledge Base:
 
@@ -580,7 +582,7 @@ This dramatically reduces context usage.
 
 ---
 
-# Smart Context vs Large Context
+## Smart Context vs Large Context
 
 Traditional Approach:
 
@@ -598,7 +600,7 @@ This is the key insight behind modern retrieval systems.
 
 ---
 
-# Context Window and RAG
+## Context Window and RAG
 
 Without RAG:
 
@@ -626,7 +628,7 @@ Better Answers
 
 ---
 
-# Real Enterprise Example
+## Real Enterprise Example
 
 Question:
 
@@ -651,39 +653,39 @@ Only relevant information enters the context window.
 
 ---
 
-# Best Practices
+## Best Practices
 
-## Retrieve Before Generate
+### Retrieve Before Generate
 
 Always retrieve relevant information first.
 
 ---
 
-## Keep Chunks Small
+### Keep Chunks Small
 
 Smaller chunks fit more efficiently into context.
 
 ---
 
-## Use Reranking
+### Use Reranking
 
 Select the most relevant chunks.
 
 ---
 
-## Avoid Dumping Entire Documents
+### Avoid Dumping Entire Documents
 
 Large documents waste context.
 
 ---
 
-## Monitor Token Usage
+### Monitor Token Usage
 
 Track how much context is being consumed.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 Context Window Limitations are one of the most important challenges in modern AI systems.
 
@@ -704,11 +706,11 @@ That is exactly what Retrieval-Augmented Generation enables.
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter:
 
-# Why Fine-Tuning Is Not Enough
+## Why Fine-Tuning Is Not Enough
 
 You will learn:
 
@@ -717,3 +719,23 @@ You will learn:
 - Fine-Tuning vs RAG
 - When to use each approach
 - Why most enterprise AI systems use RAG instead of continuous fine-tuning
+
+---
+
+## Test Yourself
+
+1. What is a context window?
+2. What is a token?
+3. Besides the user question, what else consumes tokens inside the context window?
+4. What is the "lost in the middle" problem?
+5. How does RAG reduce context usage when a knowledge base has 100,000 documents?
+
+<details>
+<summary>Answers</summary>
+
+1. The maximum amount of information an LLM can process in a single interaction, like working memory.
+2. A unit of text the model reads, which can be a word, part of a word, a symbol, or a punctuation mark.
+3. The system prompt, conversation history, retrieved documents, and the generated response.
+4. Models often fail to notice critical information placed in the middle of a long context window.
+5. RAG retrieves only the most relevant chunks instead of sending the entire knowledge base.
+</details>

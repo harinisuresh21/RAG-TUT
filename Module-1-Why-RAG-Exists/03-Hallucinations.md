@@ -1,6 +1,8 @@
 # Hallucinations
 
-# Introduction
+> **Module 1** — Previous: [02-LLM Limitations](02-LLM%20Limitations.md) · Next chapter: 04-Knowledge cutoff.md → [04-Knowledge cutoff](04-Knowledge%20cutoff.md)
+
+## Introduction
 
 Imagine asking an AI:
 
@@ -32,7 +34,7 @@ Understanding hallucinations is critical before building production AI systems.
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -46,7 +48,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# What is a Hallucination?
+## What is a Hallucination?
 
 A hallucination occurs when an AI model generates information that:
 
@@ -63,7 +65,7 @@ but is actually:
 
 ---
 
-## Simple Definition
+### Simple Definition
 
 ```text
 Confidently Wrong
@@ -71,13 +73,13 @@ Confidently Wrong
 
 ---
 
-## Formal Definition
+### Formal Definition
 
 A hallucination is generated content that is not grounded in factual information, training data, retrieved context, or verifiable evidence.
 
 ---
 
-# Why Hallucinations Happen
+## Why Hallucinations Happen
 
 Many beginners assume AI works like this:
 
@@ -125,7 +127,7 @@ This difference is extremely important.
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```mermaid
 flowchart TD
@@ -145,7 +147,7 @@ F --> G[Hallucination]
 
 ---
 
-# Example 1: Future Events
+## Example 1: Future Events
 
 User:
 
@@ -165,7 +167,7 @@ It simply generates a plausible answer.
 
 ---
 
-# Example 2: Fake Sources
+## Example 2: Fake Sources
 
 User:
 
@@ -185,7 +187,7 @@ The model invented a citation.
 
 ---
 
-# Example 3: Fake Statistics
+## Example 3: Fake Statistics
 
 User:
 
@@ -203,7 +205,7 @@ The number may be completely fabricated.
 
 ---
 
-# Why Confidence Is Dangerous
+## Why Confidence Is Dangerous
 
 Humans often associate confidence with correctness.
 
@@ -235,13 +237,13 @@ This combination is dangerous.
 
 ---
 
-# Types of Hallucinations
+## Types of Hallucinations
 
 Hallucinations come in many forms.
 
 ---
 
-# Type 1: Factual Hallucination
+## Type 1: Factual Hallucination
 
 The model invents facts.
 
@@ -259,7 +261,7 @@ Reality:
 
 ---
 
-# Type 2: Citation Hallucination
+## Type 2: Citation Hallucination
 
 The model invents references.
 
@@ -274,7 +276,7 @@ The book does not exist.
 
 ---
 
-# Type 3: Source Hallucination
+## Type 3: Source Hallucination
 
 The model claims information came from a source.
 
@@ -288,7 +290,7 @@ No such report exists.
 
 ---
 
-# Type 4: Mathematical Hallucination
+## Type 4: Mathematical Hallucination
 
 Models can make arithmetic mistakes.
 
@@ -304,7 +306,7 @@ While newer models are better, errors still occur.
 
 ---
 
-# Type 5: Reasoning Hallucination
+## Type 5: Reasoning Hallucination
 
 The information may be correct.
 
@@ -320,7 +322,7 @@ Conclusion = False
 
 ---
 
-# Type 6: Context Hallucination
+## Type 6: Context Hallucination
 
 The answer contradicts the provided context.
 
@@ -344,7 +346,7 @@ The model still answered incorrectly.
 
 ---
 
-# Enterprise Example
+## Enterprise Example
 
 Imagine a company chatbot.
 
@@ -370,7 +372,7 @@ This creates confusion across the organization.
 
 ---
 
-# Healthcare Example
+## Healthcare Example
 
 Patient:
 
@@ -394,7 +396,7 @@ Consequences can be severe.
 
 ---
 
-# Legal Example
+## Legal Example
 
 Lawyer:
 
@@ -418,7 +420,7 @@ This can create legal liabilities.
 
 ---
 
-# Financial Example
+## Financial Example
 
 User:
 
@@ -440,7 +442,7 @@ If the figure is fabricated:
 
 ---
 
-# DPDP Compliance Example
+## DPDP Compliance Example
 
 Imagine a privacy compliance assistant.
 
@@ -472,11 +474,11 @@ This is why hallucinations are a major concern in compliance systems.
 
 ---
 
-# Why Hallucinations Increase
+## Why Hallucinations Increase
 
 Hallucinations become more likely when:
 
-## Missing Knowledge
+### Missing Knowledge
 
 ```text
 Question
@@ -488,7 +490,7 @@ Guess
 
 ---
 
-## Ambiguous Questions
+### Ambiguous Questions
 
 Example:
 
@@ -505,7 +507,7 @@ Ambiguity increases uncertainty.
 
 ---
 
-## Long Conversations
+### Long Conversations
 
 As conversations grow:
 
@@ -519,7 +521,7 @@ Higher Error Probability
 
 ---
 
-## Poor Prompts
+### Poor Prompts
 
 Bad prompts often produce bad outputs.
 
@@ -533,7 +535,7 @@ This is vague and open-ended.
 
 ---
 
-# Why Hallucinations Cannot Be Fully Eliminated
+## Why Hallucinations Cannot Be Fully Eliminated
 
 Many beginners ask:
 
@@ -553,7 +555,7 @@ Prediction always carries uncertainty.
 
 ---
 
-# Hallucinations vs Databases
+## Hallucinations vs Databases
 
 Database:
 
@@ -579,7 +581,7 @@ This fundamental difference explains why hallucinations exist.
 
 ---
 
-# How RAG Reduces Hallucinations
+## How RAG Reduces Hallucinations
 
 Without RAG:
 
@@ -621,9 +623,9 @@ Answer
 
 ---
 
-# Visual Comparison
+## Visual Comparison
 
-## Traditional LLM
+### Traditional LLM
 
 ```mermaid
 flowchart TD
@@ -635,7 +637,7 @@ A[Question]
 
 ---
 
-## RAG System
+### RAG System
 
 ```mermaid
 flowchart TD
@@ -654,7 +656,7 @@ E --> F[Grounded Answer]
 
 ---
 
-# Can RAG Eliminate Hallucinations?
+## Can RAG Eliminate Hallucinations?
 
 No.
 
@@ -672,27 +674,27 @@ Possible failure points:
 
 ---
 
-# Best Practices for Reducing Hallucinations
+## Best Practices for Reducing Hallucinations
 
-## 1. Use RAG
+### 1. Use RAG
 
 Ground answers in evidence.
 
 ---
 
-## 2. Use Citations
+### 2. Use Citations
 
 Provide sources with responses.
 
 ---
 
-## 3. Improve Chunking
+### 3. Improve Chunking
 
 Better chunks improve retrieval.
 
 ---
 
-## 4. Restrict Answers
+### 4. Restrict Answers
 
 Example prompt:
 
@@ -703,19 +705,19 @@ If information is unavailable, say so.
 
 ---
 
-## 5. Use Verification Layers
+### 5. Use Verification Layers
 
 Validate outputs before returning them.
 
 ---
 
-## 6. Use Human Review
+### 6. Use Human Review
 
 Critical decisions should involve humans.
 
 ---
 
-# Real-World Lesson
+## Real-World Lesson
 
 One of the biggest mistakes teams make is believing:
 
@@ -737,7 +739,7 @@ not from tone.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 Hallucinations are one of the most important limitations of Large Language Models.
 
@@ -754,11 +756,11 @@ Understanding hallucinations is the first step toward building reliable AI appli
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter, we will explore another major limitation of LLMs:
 
-# Knowledge Cutoff
+## Knowledge Cutoff
 
 You will learn:
 
@@ -766,3 +768,23 @@ You will learn:
 - Why training data ages quickly
 - Why real-time information is difficult for LLMs
 - How RAG helps overcome knowledge cutoff limitations
+
+---
+
+## Test Yourself
+
+1. What is a hallucination?
+2. Why do LLMs hallucinate even when a question sounds simple?
+3. Name three types of hallucinations described in this chapter.
+4. Why is a confident-sounding answer dangerous in a production system?
+5. Can RAG completely eliminate hallucinations? Why or why not?
+
+<details>
+<summary>Answers</summary>
+
+1. Generated content that sounds correct and confident but is false or unsupported by evidence.
+2. LLMs predict the next likely token; when knowledge is missing they generate a plausible guess.
+3. Factual, citation, source, mathematical, reasoning, and context hallucinations (any three).
+4. Confidence is not accuracy, and confident wrong answers can cause legal, financial, or safety damage.
+5. No, RAG reduces hallucinations by grounding answers in retrieved evidence but cannot eliminate them entirely.
+</details>

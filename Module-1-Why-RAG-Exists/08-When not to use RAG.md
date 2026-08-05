@@ -1,6 +1,8 @@
 # When NOT To Use RAG
 
-# Introduction
+> **Module 1** — Previous: [07-Fine tunning vs RAG](07-Fine%20tunning%20vs%20RAG.md) · Next: End of module
+
+## Introduction
 
 After learning about:
 
@@ -45,7 +47,7 @@ This chapter focuses on identifying situations where RAG is unnecessary.
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -58,7 +60,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# The Golden Rule
+## The Golden Rule
 
 Before adding RAG ask:
 
@@ -76,7 +78,7 @@ then RAG is probably unnecessary.
 
 ---
 
-# Decision Framework
+## Decision Framework
 
 ```mermaid
 flowchart TD
@@ -96,7 +98,7 @@ D -->|Yes| F[RAG Recommended]
 
 ---
 
-# Scenario 1: General Knowledge Questions
+## Scenario 1: General Knowledge Questions
 
 Question:
 
@@ -122,7 +124,7 @@ No retrieval is required.
 
 ---
 
-## Bad Architecture
+### Bad Architecture
 
 ```text
 Question
@@ -138,7 +140,7 @@ Answer
 
 ---
 
-## Better Architecture
+### Better Architecture
 
 ```text
 Question
@@ -156,7 +158,7 @@ Cheap.
 
 ---
 
-# Scenario 2: Content Generation
+## Scenario 2: Content Generation
 
 Question:
 
@@ -184,7 +186,7 @@ RAG usually provides little value.
 
 ---
 
-# Example
+## Example
 
 User:
 
@@ -204,7 +206,7 @@ The model already has sufficient language understanding.
 
 ---
 
-# Scenario 3: Brainstorming
+## Scenario 3: Brainstorming
 
 Question:
 
@@ -232,7 +234,7 @@ RAG adds complexity without improving output.
 
 ---
 
-# Scenario 4: Translation
+## Scenario 4: Translation
 
 Question:
 
@@ -252,7 +254,7 @@ No external knowledge is needed.
 
 ---
 
-# Example
+## Example
 
 ```text
 Hello
@@ -264,7 +266,7 @@ No retrieval involved.
 
 ---
 
-# Scenario 5: Grammar Correction
+## Scenario 5: Grammar Correction
 
 Question:
 
@@ -290,7 +292,7 @@ RAG provides no benefit.
 
 ---
 
-# Scenario 6: Sentiment Analysis
+## Scenario 6: Sentiment Analysis
 
 Question:
 
@@ -316,7 +318,7 @@ Not retrieval.
 
 ---
 
-# Scenario 7: Structured Extraction
+## Scenario 7: Structured Extraction
 
 Question:
 
@@ -346,7 +348,7 @@ No retrieval required.
 
 ---
 
-# Scenario 8: Summarization of Single Documents
+## Scenario 8: Summarization of Single Documents
 
 User uploads:
 
@@ -382,7 +384,7 @@ is sufficient.
 
 ---
 
-# Scenario 9: Code Generation
+## Scenario 9: Code Generation
 
 Question:
 
@@ -402,7 +404,7 @@ No retrieval is needed.
 
 ---
 
-# Scenario 10: Mathematical Problems
+## Scenario 10: Mathematical Problems
 
 Question:
 
@@ -422,7 +424,7 @@ Not knowledge retrieval.
 
 ---
 
-# Common Beginner Mistake
+## Common Beginner Mistake
 
 Many developers build:
 
@@ -446,13 +448,13 @@ for zero practical benefit.
 
 ---
 
-# The Cost Problem
+## The Cost Problem
 
 RAG introduces additional components.
 
 ---
 
-## Without RAG
+### Without RAG
 
 ```text
 User
@@ -464,7 +466,7 @@ Answer
 
 ---
 
-## With RAG
+### With RAG
 
 ```text
 User
@@ -490,9 +492,9 @@ More maintenance.
 
 ---
 
-# The Latency Problem
+## The Latency Problem
 
-Without RAG:
+### Without RAG
 
 ```text
 Request
@@ -526,7 +528,7 @@ Additional processing increases response time.
 
 ---
 
-# The Maintenance Problem
+## The Maintenance Problem
 
 RAG systems require:
 
@@ -540,7 +542,7 @@ This infrastructure has operational costs.
 
 ---
 
-# When Fine-Tuning Is Better
+## When Fine-Tuning Is Better
 
 Suppose your goal is:
 
@@ -563,7 +565,7 @@ No retrieval needed.
 
 ---
 
-# Example
+## Example
 
 Goal:
 
@@ -583,7 +585,7 @@ Fine-Tuning may help more than RAG.
 
 ---
 
-# When Prompt Engineering Is Enough
+## When Prompt Engineering Is Enough
 
 Question:
 
@@ -604,7 +606,7 @@ Sometimes prompt engineering solves the problem.
 
 ---
 
-# When Context Alone Is Enough
+## When Context Alone Is Enough
 
 Suppose user provides:
 
@@ -624,7 +626,7 @@ The model already has access to the information.
 
 ---
 
-# Enterprise Example
+## Enterprise Example
 
 Bad Use Case:
 
@@ -662,9 +664,9 @@ RAG becomes valuable.
 
 ---
 
-# Simple Architecture Selection Guide
+## Simple Architecture Selection Guide
 
-## Use Prompting When
+### Use Prompting When
 
 - General questions
 - Content generation
@@ -673,7 +675,7 @@ RAG becomes valuable.
 
 ---
 
-## Use Fine-Tuning When
+### Use Fine-Tuning When
 
 - Consistent style
 - Structured outputs
@@ -681,7 +683,7 @@ RAG becomes valuable.
 
 ---
 
-## Use RAG When
+### Use RAG When
 
 - Private data
 - Dynamic knowledge
@@ -690,7 +692,7 @@ RAG becomes valuable.
 
 ---
 
-# Comparison Table
+## Comparison Table
 
 | Requirement | Prompting | Fine-Tuning | RAG |
 |------------|-----------|-------------|-----|
@@ -706,7 +708,7 @@ RAG becomes valuable.
 
 ---
 
-# Real-World Engineering Principle
+## Real-World Engineering Principle
 
 A senior AI engineer asks:
 
@@ -726,7 +728,7 @@ The goal is to build the simplest system that solves the problem.
 
 ---
 
-# Architecture Hierarchy
+## Architecture Hierarchy
 
 Always start here:
 
@@ -748,7 +750,7 @@ RAG
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```mermaid
 flowchart TD
@@ -772,7 +774,7 @@ F -->|Yes| G[RAG]
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 RAG is powerful.
 
@@ -800,13 +802,13 @@ The Simplest One That Works
 
 ---
 
-# Module 1 Project
+## Module 1 Project
 
 You now understand the major limitations of LLMs and why RAG was invented.
 
 In the next section, we will build:
 
-# Project 1: Comparing LLM vs RAG
+## Project 1: Comparing LLM vs RAG
 
 You will create a practical demo that shows:
 
@@ -815,4 +817,24 @@ You will create a practical demo that shows:
 - Private Data Limitations
 - Context Window Challenges
 - How RAG solves these problems
+
+---
+
+## Test Yourself
+
+1. What is the golden rule to apply before adding RAG to a system?
+2. Is RAG needed to answer "What is Python?" Why or why not?
+3. Name three costs that RAG introduces into a system.
+4. When is fine-tuning a better choice than RAG?
+5. What is the recommended architecture hierarchy when solving a new problem?
+
+<details>
+<summary>Answers</summary>
+
+1. Ask whether the model actually needs external knowledge; if not, RAG is probably unnecessary.
+2. No, that knowledge already exists in the model's training data, so no retrieval is required.
+3. Additional infrastructure, retrieval latency, and maintenance overhead (plus embedding costs).
+4. When you need consistent structured outputs, a custom style, or domain-specific behavior.
+5. Start with prompting, move to fine-tuning if needed, and use RAG only when external knowledge access is required.
+</details>
 

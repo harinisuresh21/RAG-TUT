@@ -1,6 +1,8 @@
 # Private Data Problem
 
-# Introduction
+> **Module 1** — Previous: [04-Knowledge cutoff](04-Knowledge%20cutoff.md) · Next chapter: 06-Context Window.md → [06-Context Window](06-Context%20Window.md)
+
+## Introduction
 
 Imagine asking ChatGPT:
 
@@ -28,7 +30,7 @@ Because the model has never seen those documents.
 
 This limitation is known as the:
 
-# Private Data Problem
+## Private Data Problem
 
 It is one of the biggest reasons organizations adopt Retrieval-Augmented Generation (RAG).
 
@@ -36,7 +38,7 @@ In fact, most enterprise AI projects exist not because LLMs are incapable, but b
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -50,7 +52,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# What is the Private Data Problem?
+## What is the Private Data Problem?
 
 Large Language Models are trained on:
 
@@ -81,7 +83,7 @@ Company Knowledge
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```text
 Public Internet
@@ -108,7 +110,7 @@ Your Company Data
 
 ---
 
-# Example 1: HR Policy
+## Example 1: HR Policy
 
 Question:
 
@@ -128,7 +130,7 @@ It was never part of training.
 
 ---
 
-# Example 2: Customer Support
+## Example 2: Customer Support
 
 Question:
 
@@ -146,7 +148,7 @@ The LLM has never seen it.
 
 ---
 
-# Example 3: Compliance
+## Example 3: Compliance
 
 Question:
 
@@ -164,9 +166,9 @@ The model cannot know this unless it has access to the policy.
 
 ---
 
-# Public Knowledge vs Private Knowledge
+## Public Knowledge vs Private Knowledge
 
-## Public Knowledge
+### Public Knowledge
 
 Examples:
 
@@ -188,7 +190,7 @@ LLMs perform well.
 
 ---
 
-## Private Knowledge
+### Private Knowledge
 
 Examples:
 
@@ -210,7 +212,7 @@ LLMs struggle.
 
 ---
 
-# Enterprise Knowledge Explosion
+## Enterprise Knowledge Explosion
 
 Modern companies generate enormous amounts of data.
 
@@ -237,7 +239,7 @@ This knowledge constantly evolves.
 
 ---
 
-# Why Training Cannot Solve This
+## Why Training Cannot Solve This
 
 Many beginners think:
 
@@ -251,7 +253,7 @@ Reality is different.
 
 ---
 
-# Problem 1: Data Changes Constantly
+## Problem 1: Data Changes Constantly
 
 Imagine:
 
@@ -273,7 +275,7 @@ Not practical.
 
 ---
 
-# Problem 2: Massive Cost
+## Problem 2: Massive Cost
 
 Training modern models costs:
 
@@ -289,7 +291,7 @@ Retraining every time a document changes is impossible.
 
 ---
 
-# Problem 3: Security Risks
+## Problem 3: Security Risks
 
 Many organizations cannot expose:
 
@@ -302,7 +304,7 @@ to model training pipelines.
 
 ---
 
-# Problem 4: Version Control
+## Problem 4: Version Control
 
 Which version should the model learn?
 
@@ -325,7 +327,7 @@ Training creates stale knowledge.
 
 ---
 
-# The Internal Wiki Problem
+## The Internal Wiki Problem
 
 Imagine a company wiki.
 
@@ -355,7 +357,7 @@ But the model cannot access it.
 
 ---
 
-# Real Enterprise Example
+## Real Enterprise Example
 
 Imagine a bank.
 
@@ -384,7 +386,7 @@ Model = Outdated
 
 ---
 
-# The Search Problem
+## The Search Problem
 
 Even if documents exist:
 
@@ -424,7 +426,7 @@ Keyword search may fail.
 
 ---
 
-# Why Traditional Search Isn't Enough
+## Why Traditional Search Isn't Enough
 
 Traditional Search:
 
@@ -444,7 +446,7 @@ Issues:
 
 ---
 
-# Why LLMs Alone Aren't Enough
+## Why LLMs Alone Aren't Enough
 
 Traditional LLM:
 
@@ -464,7 +466,7 @@ Issues:
 
 ---
 
-# The Enterprise AI Challenge
+## The Enterprise AI Challenge
 
 Organizations need:
 
@@ -478,7 +480,7 @@ Neither traditional search nor standalone LLMs solve both.
 
 ---
 
-# Enter Retrieval-Augmented Generation (RAG)
+## Enter Retrieval-Augmented Generation (RAG)
 
 RAG combines:
 
@@ -494,7 +496,7 @@ into a single architecture.
 
 ---
 
-# How RAG Solves Private Data Access
+## How RAG Solves Private Data Access
 
 Workflow:
 
@@ -524,7 +526,7 @@ without retraining.
 
 ---
 
-# Visual Architecture
+## Visual Architecture
 
 ```mermaid
 flowchart TD
@@ -544,7 +546,7 @@ E --> F[Answer]
 
 ---
 
-# Example: Leave Policy
+## Example: Leave Policy
 
 User:
 
@@ -575,7 +577,7 @@ Now the answer is grounded in evidence.
 
 ---
 
-# Example: Contract Analysis
+## Example: Contract Analysis
 
 Question:
 
@@ -605,29 +607,29 @@ without retraining.
 
 ---
 
-# Why Enterprises Love RAG
+## Why Enterprises Love RAG
 
 Benefits:
 
-## Up-to-Date Information
+### Up-to-Date Information
 
 Latest documents can be used immediately.
 
 ---
 
-## No Retraining
+### No Retraining
 
 New files become searchable after indexing.
 
 ---
 
-## Better Accuracy
+### Better Accuracy
 
 Answers come from actual documents.
 
 ---
 
-## Explainability
+### Explainability
 
 Sources can be shown.
 
@@ -641,13 +643,13 @@ Page 12
 
 ---
 
-## Security
+### Security
 
 Private knowledge remains inside enterprise systems.
 
 ---
 
-# Common Misconception
+## Common Misconception
 
 Many people think:
 
@@ -669,7 +671,7 @@ The knowledge comes from retrieval.
 
 ---
 
-# Brain and Library Analogy
+## Brain and Library Analogy
 
 Think of:
 
@@ -699,7 +701,7 @@ RAG gives the employee access to the library.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 The Private Data Problem is one of the biggest limitations of Large Language Models.
 
@@ -718,11 +720,11 @@ This is why most successful enterprise AI systems today are powered by Retrieval
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter:
 
-# Context Window Limitations
+## Context Window Limitations
 
 You will learn:
 
@@ -731,3 +733,23 @@ You will learn:
 - Why large document collections create problems
 - Why even modern LLMs cannot read everything at once
 - How RAG intelligently selects only the most relevant information
+
+---
+
+## Test Yourself
+
+1. What is the Private Data Problem?
+2. Give two reasons why training a model on company data cannot solve the problem.
+3. Why does keyword search fail when a user searches "vacation rules" but the document is titled "Annual Leave Policy"?
+4. How does RAG let an LLM answer "What is our leave policy?" without retraining the model?
+5. In the brain-and-library analogy, what does the library represent?
+
+<details>
+<summary>Answers</summary>
+
+1. LLMs are trained on public data and have no access to private company documents such as policies and contracts.
+2. Data changes constantly and training is extremely expensive (also: security risks and version-control problems).
+3. Keyword search requires exact words, so synonyms and different wording cause it to miss relevant documents.
+4. The retriever finds the HR document and the LLM answers using the retrieved context as evidence.
+5. The library represents the company documents that RAG gives the model access to.
+</details>

@@ -1,6 +1,8 @@
 # Knowledge Cutoff
 
-# Introduction
+> **Module 1** — Previous: [03-Hallucinations](03-Hallucinations.md) · Next chapter: 05-Private data problem.md → [05-Private data problem](05-Private%20data%20problem.md)
+
+## Introduction
 
 Imagine asking an AI:
 
@@ -26,7 +28,7 @@ Why does this happen?
 
 The answer lies in one of the most fundamental limitations of Large Language Models:
 
-# Knowledge Cutoff
+## Knowledge Cutoff
 
 Knowledge Cutoff is one of the primary reasons Retrieval-Augmented Generation (RAG) became essential for modern AI systems.
 
@@ -36,7 +38,7 @@ This chapter explores what Knowledge Cutoff is, why it exists, its impact on rea
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -49,7 +51,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# What is Knowledge Cutoff?
+## What is Knowledge Cutoff?
 
 Knowledge Cutoff refers to the point in time after which a model has no inherent knowledge.
 
@@ -65,7 +67,7 @@ Anything that happens after the training period is unknown to the model.
 
 ---
 
-# Simple Analogy
+## Simple Analogy
 
 Imagine a student preparing for an exam.
 
@@ -87,7 +89,7 @@ LLMs face the exact same problem.
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```mermaid
 timeline
@@ -106,7 +108,7 @@ Everything after training becomes invisible to the model.
 
 ---
 
-# Why Does Knowledge Cutoff Exist?
+## Why Does Knowledge Cutoff Exist?
 
 Many beginners ask:
 
@@ -125,7 +127,7 @@ A model is essentially a snapshot of knowledge at a particular point in time.
 
 ---
 
-# Training as a Snapshot
+## Training as a Snapshot
 
 Think of training like taking a photograph.
 
@@ -151,7 +153,7 @@ The model cannot magically learn new events.
 
 ---
 
-# Example: Sports
+## Example: Sports
 
 Suppose a model was trained until:
 
@@ -169,13 +171,13 @@ The model cannot know.
 
 Possible outcomes:
 
-### Best Case
+#### Best Case
 
 ```text
 I don't have information.
 ```
 
-### Worst Case
+#### Worst Case
 
 ```text
 Mumbai Indians won IPL 2026.
@@ -185,7 +187,7 @@ which is completely fabricated.
 
 ---
 
-# Example: Stock Markets
+## Example: Stock Markets
 
 Question:
 
@@ -205,7 +207,7 @@ Answer = Outdated
 
 ---
 
-# Example: News
+## Example: News
 
 Question:
 
@@ -221,7 +223,7 @@ The model cannot know unless:
 
 ---
 
-# Example: Regulations
+## Example: Regulations
 
 Consider compliance systems.
 
@@ -243,7 +245,7 @@ This creates:
 
 ---
 
-# Enterprise Knowledge Cutoff
+## Enterprise Knowledge Cutoff
 
 Knowledge cutoff becomes even more severe inside organizations.
 
@@ -277,7 +279,7 @@ Not In Training Data
 
 ---
 
-# The Enterprise Problem
+## The Enterprise Problem
 
 Consider a company with:
 
@@ -296,7 +298,7 @@ Training a new model every time something changes would be impossible.
 
 ---
 
-# Visual Example
+## Visual Example
 
 ```text
 Company Knowledge Base
@@ -315,7 +317,7 @@ The model becomes stale.
 
 ---
 
-# Why Fine-Tuning Doesn't Solve This
+## Why Fine-Tuning Doesn't Solve This
 
 Many beginners think:
 
@@ -343,7 +345,7 @@ Not practical.
 
 ---
 
-# Fine-Tuning Workflow
+## Fine-Tuning Workflow
 
 ```mermaid
 flowchart TD
@@ -368,7 +370,7 @@ This process is:
 
 ---
 
-# Real-World Example
+## Real-World Example
 
 Suppose your HR team updates:
 
@@ -398,7 +400,7 @@ Wrong Answer
 
 ---
 
-# Dynamic Data vs Static Models
+## Dynamic Data vs Static Models
 
 The world changes continuously.
 
@@ -420,13 +422,13 @@ This mismatch creates the Knowledge Cutoff problem.
 
 ---
 
-# Industries Affected
+## Industries Affected
 
 Knowledge Cutoff impacts nearly every industry.
 
 ---
 
-# Finance
+## Finance
 
 Examples:
 
@@ -438,7 +440,7 @@ These change constantly.
 
 ---
 
-# Healthcare
+## Healthcare
 
 Examples:
 
@@ -450,7 +452,7 @@ Outdated information can be dangerous.
 
 ---
 
-# Legal
+## Legal
 
 Examples:
 
@@ -462,7 +464,7 @@ Incorrect legal advice can create liability.
 
 ---
 
-# Compliance
+## Compliance
 
 Examples:
 
@@ -474,7 +476,7 @@ Organizations need current information.
 
 ---
 
-# Customer Support
+## Customer Support
 
 Examples:
 
@@ -486,7 +488,7 @@ Customers expect up-to-date answers.
 
 ---
 
-# The Traditional LLM Problem
+## The Traditional LLM Problem
 
 Traditional workflow:
 
@@ -508,7 +510,7 @@ Answer Quality Drops
 
 ---
 
-# How RAG Solves Knowledge Cutoff
+## How RAG Solves Knowledge Cutoff
 
 Instead of relying only on memory:
 
@@ -533,9 +535,9 @@ Now the model can access:
 
 ---
 
-# Visual Comparison
+## Visual Comparison
 
-## Traditional LLM
+### Traditional LLM
 
 ```mermaid
 flowchart TD
@@ -553,7 +555,7 @@ Memory Can Become Outdated
 
 ---
 
-## RAG
+### RAG
 
 ```mermaid
 flowchart TD
@@ -572,7 +574,7 @@ E --> F[Updated Answer]
 
 ---
 
-# Enterprise Example
+## Enterprise Example
 
 Question:
 
@@ -598,7 +600,7 @@ Huge difference.
 
 ---
 
-# RAG as External Memory
+## RAG as External Memory
 
 A useful mental model:
 
@@ -622,7 +624,7 @@ Reliable System
 
 ---
 
-# Does RAG Completely Eliminate Knowledge Cutoff?
+## Does RAG Completely Eliminate Knowledge Cutoff?
 
 Not entirely.
 
@@ -645,9 +647,9 @@ compared to standalone LLMs.
 
 ---
 
-# Best Practices
+## Best Practices
 
-## Use RAG for Dynamic Information
+### Use RAG for Dynamic Information
 
 Examples:
 
@@ -658,31 +660,31 @@ Examples:
 
 ---
 
-## Keep Knowledge Bases Updated
+### Keep Knowledge Bases Updated
 
 Retrieval is only as good as the data available.
 
 ---
 
-## Use Versioned Documents
+### Use Versioned Documents
 
 Maintain historical records.
 
 ---
 
-## Refresh Embeddings Periodically
+### Refresh Embeddings Periodically
 
 Ensure new content becomes searchable.
 
 ---
 
-## Add Source Citations
+### Add Source Citations
 
 Help users verify information.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 Knowledge Cutoff is one of the most important limitations of Large Language Models.
 
@@ -699,11 +701,11 @@ Knowledge Cutoff is one of the strongest arguments for using Retrieval-Augmented
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter:
 
-# Private Data Problem
+## Private Data Problem
 
 You will learn:
 
@@ -711,3 +713,23 @@ You will learn:
 - Why enterprise knowledge is different from public knowledge
 - The challenge of internal documentation
 - Why private data is one of the biggest drivers of RAG adoption
+
+---
+
+## Test Yourself
+
+1. What is Knowledge Cutoff?
+2. Why can't an LLM simply "know everything"?
+3. Why doesn't fine-tuning solve the Knowledge Cutoff problem for data that changes daily?
+4. In the WFH policy example, what happens when the model answers after the policy was updated?
+5. How does RAG help with Knowledge Cutoff, and can it eliminate the problem completely?
+
+<details>
+<summary>Answers</summary>
+
+1. The point in time after which a model has no inherent knowledge because that information did not exist in its training data.
+2. Training is extremely expensive and slow, and a model is a fixed snapshot of knowledge at one point in time.
+3. You would need to retrain the model every time a document or policy changes, which is impractical.
+4. The model relies on its old training knowledge and returns an outdated, wrong answer.
+5. RAG retrieves fresh, current documents at query time, which massively reduces the problem but does not eliminate it entirely.
+</details>

@@ -1,6 +1,8 @@
 # LLM Limitations
 
-# Introduction
+> **Module 1** — Previous: [01-Introduction](01-Introduction.md) · Next chapter: 03-Hallucinations.md → [03-Hallucinations](03-Hallucinations.md)
+
+## Introduction
 
 Large Language Models (LLMs) have transformed the field of Artificial Intelligence.
 
@@ -23,7 +25,7 @@ To understand why Retrieval-Augmented Generation (RAG) exists, we must first und
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -35,7 +37,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# Understanding How LLMs Actually Work
+## Understanding How LLMs Actually Work
 
 Before discussing limitations, we need to understand what an LLM actually does.
 
@@ -86,7 +88,7 @@ This distinction explains nearly every limitation we will discuss.
 
 ---
 
-# The Human Memory Analogy
+## The Human Memory Analogy
 
 Imagine a student who has read millions of books.
 
@@ -107,7 +109,7 @@ They do not store information like a database.
 
 ---
 
-# Limitation 1: Hallucinations
+## Limitation 1: Hallucinations
 
 One of the most famous limitations of LLMs is hallucination.
 
@@ -137,7 +139,7 @@ The model fabricated information.
 
 ---
 
-## Why Hallucinations Occur
+### Why Hallucinations Occur
 
 Consider this workflow:
 
@@ -167,29 +169,29 @@ This creates a major challenge for production AI systems.
 
 Hallucinations can cause:
 
-### Finance
+#### Finance
 
 Wrong investment recommendations
 
-### Healthcare
+#### Healthcare
 
 Incorrect medical guidance
 
-### Legal
+#### Legal
 
 Fabricated legal clauses
 
-### Compliance
+#### Compliance
 
 Incorrect regulatory interpretations
 
-### Customer Support
+#### Customer Support
 
 False information given to customers
 
 ---
 
-# Limitation 2: Knowledge Cutoff
+## Limitation 2: Knowledge Cutoff
 
 LLMs only know information available during training.
 
@@ -212,7 +214,7 @@ The model may not know.
 
 ---
 
-## Visual Representation
+### Visual Representation
 
 ```mermaid
 timeline
@@ -236,7 +238,7 @@ This creates a significant challenge for:
 
 ---
 
-# Limitation 3: No Access to Private Data
+## Limitation 3: No Access to Private Data
 
 This is one of the biggest reasons RAG exists.
 
@@ -265,7 +267,7 @@ Company Knowledge
 
 ---
 
-## Enterprise Example
+### Enterprise Example
 
 Ask:
 
@@ -281,7 +283,7 @@ This makes generic LLMs unsuitable for many enterprise use cases.
 
 ---
 
-# Limitation 4: Context Window Restrictions
+## Limitation 4: Context Window Restrictions
 
 LLMs cannot process unlimited information.
 
@@ -312,7 +314,7 @@ Gets Removed
 
 ---
 
-## Real World Example
+### Real World Example
 
 Imagine:
 
@@ -328,7 +330,7 @@ This becomes a major challenge when building enterprise assistants.
 
 ---
 
-## Visual Example
+### Visual Example
 
 ```text
 Entire Knowledge Base
@@ -346,7 +348,7 @@ The model can only see a fraction of the available information.
 
 ---
 
-# Limitation 5: No Source Verification
+## Limitation 5: No Source Verification
 
 LLMs generate answers.
 
@@ -382,7 +384,7 @@ This is dangerous in:
 
 ---
 
-# Limitation 6: Inconsistent Answers
+## Limitation 6: Inconsistent Answers
 
 Ask the same question multiple times.
 
@@ -414,7 +416,7 @@ For enterprise systems, consistency is critical.
 
 ---
 
-# Limitation 7: Explainability
+## Limitation 7: Explainability
 
 Many AI systems require explainability.
 
@@ -450,7 +452,7 @@ Without evidence:
 
 ---
 
-# Limitation 8: Compliance Risks
+## Limitation 8: Compliance Risks
 
 This is particularly important for:
 
@@ -487,7 +489,7 @@ This creates:
 
 ---
 
-# Why These Limitations Matter
+## Why These Limitations Matter
 
 Let's imagine a company has:
 
@@ -520,7 +522,7 @@ This is not reliable.
 
 ---
 
-# The Need for Something Better
+## The Need for Something Better
 
 Developers needed a way to:
 
@@ -532,13 +534,13 @@ Developers needed a way to:
 
 This requirement led to the development of:
 
-# Retrieval-Augmented Generation (RAG)
+## Retrieval-Augmented Generation (RAG)
 
 ---
 
-# Traditional LLM vs RAG
+## Traditional LLM vs RAG
 
-## Traditional LLM
+### Traditional LLM
 
 ```text
 Question
@@ -556,7 +558,7 @@ Problems:
 
 ---
 
-## RAG
+### RAG
 
 ```text
 Question
@@ -579,7 +581,7 @@ Benefits:
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 Large Language Models are incredibly powerful.
 
@@ -602,11 +604,11 @@ Understanding these limitations is the first step toward understanding why Retri
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter, we will dive deep into the most famous limitation of all:
 
-# Hallucinations
+## Hallucinations
 
 We will explore:
 
@@ -615,3 +617,23 @@ We will explore:
 - Real-world failures
 - How RAG reduces hallucinations
 - Why hallucinations can never be completely eliminated
+
+---
+
+## Test Yourself
+
+1. In one sentence, what is the primary job of an LLM when it responds to you?
+2. What is a hallucination?
+3. Why does a model trained until December 2024 fail on the question "Who won the IPL in 2026?"
+4. Why can't a generic LLM correctly answer "What is our leave policy?"
+5. Name two reasons why a compliance system cannot rely on a standalone LLM.
+
+<details>
+<summary>Answers</summary>
+
+1. It predicts the next most likely token based on patterns learned during training.
+2. Content that sounds correct and confident but is actually false or fabricated.
+3. The event happened after training, so it is beyond the model's knowledge cutoff.
+4. The HR document is private data that was never part of the model's public training data.
+5. No source verification and compliance risks such as wrong answers on data retention or regulatory rules.
+</details>

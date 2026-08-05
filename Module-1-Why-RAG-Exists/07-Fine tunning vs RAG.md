@@ -1,6 +1,8 @@
 # Why Fine-Tuning Is Not Enough
 
-# Introduction
+> **Module 1** — Previous: [06-Context Window](06-Context%20Window.md) · Next chapter: 08-When not to use RAG.md → [08-When not to use RAG](08-When%20not%20to%20use%20RAG.md)
+
+## Introduction
 
 After learning about:
 
@@ -53,7 +55,7 @@ Understanding this distinction is critical for building scalable AI systems.
 
 ---
 
-# Learning Objectives
+## Learning Objectives
 
 By the end of this chapter, you will understand:
 
@@ -67,7 +69,7 @@ By the end of this chapter, you will understand:
 
 ---
 
-# What is Fine-Tuning?
+## What is Fine-Tuning?
 
 Fine-Tuning is the process of training an existing model on additional data to modify its behavior.
 
@@ -87,7 +89,7 @@ This distinction is extremely important.
 
 ---
 
-# Human Analogy
+## Human Analogy
 
 Imagine hiring a new employee.
 
@@ -116,7 +118,7 @@ Fine-Tuning works similarly.
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ```mermaid
 flowchart TD
@@ -134,11 +136,11 @@ The model learns patterns from the new dataset.
 
 ---
 
-# What Fine-Tuning Changes
+## What Fine-Tuning Changes
 
 Fine-Tuning is excellent for changing:
 
-## Tone
+### Tone
 
 Example:
 
@@ -151,7 +153,7 @@ Friendly
 
 ---
 
-## Writing Style
+### Writing Style
 
 Example:
 
@@ -164,7 +166,7 @@ Medical Style
 
 ---
 
-## Domain Vocabulary
+### Domain Vocabulary
 
 Example:
 
@@ -176,7 +178,7 @@ Legal Language
 
 ---
 
-## Structured Outputs
+### Structured Outputs
 
 Example:
 
@@ -192,7 +194,7 @@ Fine-tuning can improve consistency.
 
 ---
 
-# What Fine-Tuning Does NOT Change
+## What Fine-Tuning Does NOT Change
 
 Many beginners incorrectly assume:
 
@@ -206,7 +208,7 @@ Fine-Tuning does not turn a model into a database.
 
 ---
 
-# Example
+## Example
 
 Training Data:
 
@@ -238,7 +240,7 @@ unless retrained.
 
 ---
 
-# The Biggest Misconception
+## The Biggest Misconception
 
 Many teams believe:
 
@@ -264,7 +266,7 @@ Retrieval Systems
 
 ---
 
-# The Static Knowledge Problem
+## The Static Knowledge Problem
 
 Suppose your company has:
 
@@ -296,7 +298,7 @@ Not practical.
 
 ---
 
-# Visual Example
+## Visual Example
 
 ```text
 Company Knowledge
@@ -317,7 +319,7 @@ Knowledge continues evolving.
 
 ---
 
-# Why Fine-Tuning Cannot Solve Knowledge Cutoff
+## Why Fine-Tuning Cannot Solve Knowledge Cutoff
 
 Recall the Knowledge Cutoff problem.
 
@@ -341,7 +343,7 @@ until another training cycle occurs.
 
 ---
 
-# Fine-Tuning vs Database
+## Fine-Tuning vs Database
 
 Consider this question:
 
@@ -371,7 +373,7 @@ RAG
 
 ---
 
-# Enterprise Example
+## Enterprise Example
 
 Imagine a company with:
 
@@ -390,7 +392,7 @@ A retrieval system is often a better solution.
 
 ---
 
-# Why Fine-Tuning Large Knowledge Bases Fails
+## Why Fine-Tuning Large Knowledge Bases Fails
 
 Suppose you attempt:
 
@@ -400,25 +402,25 @@ Upload Entire Company Wiki
 
 Problems:
 
-### Data Changes
+#### Data Changes
 
 Information becomes outdated.
 
-### Cost
+#### Cost
 
 Training is expensive.
 
-### Scalability
+#### Scalability
 
 Documents continue growing.
 
-### Explainability
+#### Explainability
 
 Hard to trace where answers came from.
 
 ---
 
-# The Explainability Problem
+## The Explainability Problem
 
 Question:
 
@@ -445,7 +447,7 @@ Much better.
 
 ---
 
-# Compliance Example
+## Compliance Example
 
 Imagine:
 
@@ -469,9 +471,9 @@ Critical difference.
 
 ---
 
-# Fine-Tuning vs RAG
+## Fine-Tuning vs RAG
 
-## Fine-Tuning
+### Fine-Tuning
 
 Purpose:
 
@@ -488,7 +490,7 @@ Examples:
 
 ---
 
-## RAG
+### RAG
 
 Purpose:
 
@@ -506,9 +508,9 @@ Examples:
 
 ---
 
-# Visual Comparison
+## Visual Comparison
 
-## Fine-Tuning
+### Fine-Tuning
 
 ```mermaid
 flowchart TD
@@ -520,7 +522,7 @@ A[Training Data]
 
 ---
 
-## RAG
+### RAG
 
 ```mermaid
 flowchart TD
@@ -540,11 +542,11 @@ E --> F[Answer]
 
 ---
 
-# Memory vs Skill
+## Memory vs Skill
 
 A useful analogy:
 
-## Fine-Tuning
+### Fine-Tuning
 
 ```text
 Teaching Skills
@@ -558,7 +560,7 @@ Examples:
 
 ---
 
-## RAG
+### RAG
 
 ```text
 Providing Memory
@@ -573,7 +575,7 @@ Examples:
 
 ---
 
-# Real-World Analogy
+## Real-World Analogy
 
 Think about a lawyer.
 
@@ -607,11 +609,11 @@ RAG
 
 ---
 
-# When Fine-Tuning Makes Sense
+## When Fine-Tuning Makes Sense
 
 Fine-Tuning is useful when:
 
-## Consistent Formatting
+### Consistent Formatting
 
 Example:
 
@@ -624,7 +626,7 @@ Example:
 
 ---
 
-## Brand Voice
+### Brand Voice
 
 Example:
 
@@ -634,7 +636,7 @@ Friendly Support Agent
 
 ---
 
-## Domain Language
+### Domain Language
 
 Example:
 
@@ -646,7 +648,7 @@ Finance
 
 ---
 
-## Specialized Tasks
+### Specialized Tasks
 
 Examples:
 
@@ -657,11 +659,11 @@ Examples:
 
 ---
 
-# When RAG Makes Sense
+## When RAG Makes Sense
 
 Use RAG when:
 
-## Knowledge Changes Frequently
+### Knowledge Changes Frequently
 
 Examples:
 
@@ -671,7 +673,7 @@ Examples:
 
 ---
 
-## Large Knowledge Bases
+### Large Knowledge Bases
 
 Examples:
 
@@ -681,7 +683,7 @@ Examples:
 
 ---
 
-## Private Data
+### Private Data
 
 Examples:
 
@@ -691,7 +693,7 @@ Examples:
 
 ---
 
-## Source Citations Matter
+### Source Citations Matter
 
 Examples:
 
@@ -701,7 +703,7 @@ Examples:
 
 ---
 
-# Why Most Enterprise AI Systems Use RAG
+## Why Most Enterprise AI Systems Use RAG
 
 Enterprise knowledge changes constantly.
 
@@ -726,7 +728,7 @@ without retraining.
 
 ---
 
-# The Best Modern Architecture
+## The Best Modern Architecture
 
 Most production systems combine both.
 
@@ -738,7 +740,7 @@ RAG
 
 ---
 
-# Architecture Diagram
+## Architecture Diagram
 
 ```mermaid
 flowchart TD
@@ -763,9 +765,9 @@ Benefits:
 
 ---
 
-# Common Mistakes
+## Common Mistakes
 
-## Mistake 1
+### Mistake 1
 
 ```text
 Fine-Tune Entire Company Wiki
@@ -775,7 +777,7 @@ Use RAG instead.
 
 ---
 
-## Mistake 2
+### Mistake 2
 
 ```text
 Use Fine-Tuning For Real-Time Data
@@ -785,7 +787,7 @@ Use Retrieval.
 
 ---
 
-## Mistake 3
+### Mistake 3
 
 ```text
 Expect Fine-Tuning To Eliminate Hallucinations
@@ -795,7 +797,7 @@ It won't.
 
 ---
 
-## Mistake 4
+### Mistake 4
 
 ```text
 Ignore Source Attribution
@@ -805,7 +807,7 @@ Users need evidence.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 Fine-Tuning is a powerful tool.
 
@@ -837,11 +839,11 @@ Together, they create intelligent and reliable AI systems.
 
 ---
 
-# What's Next?
+## What's Next?
 
 In the next chapter:
 
-# When NOT To Use RAG
+## When NOT To Use RAG
 
 You will learn:
 
@@ -850,3 +852,23 @@ You will learn:
 - When a simple prompt is enough
 - Cost-benefit tradeoffs of retrieval systems
 - How to choose the right architecture for your use case
+
+---
+
+## Test Yourself
+
+1. What does fine-tuning actually change about a model?
+2. Why does a fine-tuned model return an outdated answer after a policy changes?
+3. Why is it difficult to trace where a fine-tuned model's answer came from?
+4. When is fine-tuning the better choice instead of RAG?
+5. What is the best modern enterprise architecture for combining the two?
+
+<details>
+<summary>Answers</summary>
+
+1. It changes behavior, tone, style, and formatting — not the model's stored knowledge.
+2. Fine-tuning creates a frozen snapshot, so the model keeps the old policy until it is retrained.
+3. The knowledge is compressed somewhere inside training, with no verifiable source to cite.
+4. For consistent formatting, brand voice, domain language, and specialized structured-output tasks.
+5. Use RAG for knowledge access and fine-tuning for behavior, combining both together.
+</details>
